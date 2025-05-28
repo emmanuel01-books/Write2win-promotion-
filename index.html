@@ -132,97 +132,274 @@
       padding: 2rem 1rem;
     }
     footer a {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Write2Win Promotion | Bestseller Book Marketing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* === BASE STYLES === */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background: #f9f9f9;
+    }
+
+    /* === HEADER === */
+    header {
+      background: #ffffff;
+      text-align: center;
+      padding: 3rem 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      height: 90px;
+      width: auto;
+      margin-bottom: 1rem;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      color: #2c3e50;
+      font-size: 2.2rem;
+    }
+
+    .tagline {
+      color: #7f8c8d;
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    .banner {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      margin-top: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* === NAVIGATION === */
+    nav {
+      background: #2c3e50;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .nav-link {
       color: white;
-      margin: 0 0.5rem;
-      font-size: 1.2rem;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .nav-link:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .cta-button {
+      background: #e74c3c;
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #c0392b;
+    }
+
+    /* === MAIN CONTENT === */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    /* === SERVICES === */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      color: #e74c3c;
+      margin-bottom: 1rem;
+    }
+
+    /* === TESTIMONIALS === */
+    .testimonials {
+      margin: 4rem 0;
+    }
+
+    .testimonial-card {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 1rem 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    /* === FOOTER === */
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+
+    /* === RESPONSIVE ADJUSTMENTS === */
+    @media (min-width: 768px) {
+      .header-content {
+        flex-direction: row;
+        text-align: left;
+        gap: 2rem;
+      }
+      
+      .nav-container {
+        gap: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Header Section -->
   <header>
     <div class="header-content">
-      <img src="https://via.placeholder.com/150x80?text=Logo" alt="Write2Win Logo">
-      <h1>Write2Win Promotion</h1>
-      <p class="tagline">Creating Bestseller Authors Through Data-Driven Book Marketing</p>
+      <img src="images/logo.png" alt="Write2Win Logo" class="logo">
+      <div class="header-text">
+        <h1>Write2Win Promotion</h1>
+        <p class="tagline">Data-Driven Book Marketing for Bestseller Success</p>
+      </div>
     </div>
-  </header>  <nav>
-    <a href="#services">Services</a>
-    <a href="#testimonials">Success Stories</a>
-    <a href="#contact">Contact</a>
-    <a href="#guide">Free Guide</a>
-  </nav>  <main>
+    <img src="images/banner.jpg" alt="Book Marketing Services" class="banner">
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#testimonials" class="nav-link">Success Stories</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="#free-guide" class="cta-button">Free Guide</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Services Section -->
     <section id="services">
-      <h2>Our Services</h2>
+      <h2>Our Proven Services</h2>
       <div class="services-grid">
         <div class="service-card">
           <i class="fas fa-chart-line service-icon"></i>
-          <h3>Market Research Analysis (MRA)</h3>
-          <p>We use industry-grade analytics to understand your target audience, track competitors, identify keyword opportunities, and create a custom strategy that aligns with current trends.</p>
+          <h3>Market Research</h3>
+          <p>We analyze your genre to identify the most profitable reader demographics and marketing opportunities.</p>
         </div>
+        
         <div class="service-card">
-          <i class="fas fa-share-alt service-icon"></i>
-          <h3>Social Media Promotion</h3>
-          <p>From Facebook and Instagram to TikTok and LinkedIn, we develop content calendars, daily engagement tactics, and organic/paid growth strategies to build your author brand online.</p>
+          <i class="fas fa-ad service-icon"></i>
+          <h3>Targeted Ads</h3>
+          <p>ROI-focused advertising campaigns on Amazon, Facebook, and BookTok.</p>
         </div>
+        
         <div class="service-card">
-          <i class="fas fa-video service-icon"></i>
-          <h3>Book Trailers</h3>
-          <p>Grab attention fast with cinematic-quality trailers that showcase your book's story, tone, and intrigue—perfect for ads, events, and media outreach.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-envelope-open-text service-icon"></i>
-          <h3>Email Marketing</h3>
-          <p>We send personalized campaigns to reviewers, bloggers, influencers, media outlets, and libraries to increase your visibility and boost your credibility.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-globe service-icon"></i>
-          <h3>Amazon Optimization</h3>
-          <p>Enhance your Amazon presence with optimized keywords, metadata, categories, author pages, and pricing to improve discoverability and conversion.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-rocket service-icon"></i>
-          <h3>Launch Planning</h3>
-          <p>We build a launch roadmap that covers pre-order strategies, influencer outreach, early reviews, ads, and sales events to kickstart your book’s journey to bestseller status.</p>
+          <i class="fas fa-book-open service-icon"></i>
+          <h3>Launch Strategy</h3>
+          <p>Complete roadmap to maximize your book's first 30-day sales potential.</p>
         </div>
       </div>
-    </section><section id="testimonials" class="testimonial-section">
-  <h2>Author Success Stories</h2>
-  <div class="testimonial">
-    <p>"Write2Win Promotion turned my struggling release into a #1 bestseller in just two weeks. Their strategy, especially MRA and ad placement, was beyond what I imagined."
-    <strong>- Sean Kenny, Action-Adventure Author</strong></p>
-  </div>
-  <div class="testimonial">
-    <p>"As a Christian speaker, I struggled with visibility. The trailer and targeted email outreach helped me land features in national publications. Write2Win is a game changer."
-    <strong>- Claudette Milner, Christian Speaker & Author</strong></p>
-  </div>
-  <div class="testimonial">
-    <p>"I saw a 400% increase in reader engagement after they launched my campaign. If you want your book taken seriously, start with Write2Win."
-    <strong>- Alvin Dorsey Jr., Memoirist</strong></p>
-  </div>
-</section>
+    </section>
 
-<section id="contact">
-  <h2>Work With Us</h2>
-  <form class="contact-form">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Tell us about your book project..." rows="5"></textarea>
-    <button type="submit" class="cta-button">Submit</button>
-  </form>
-</section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+      <h2>Author Success Stories</h2>
+      <div class="testimonial-card">
+        <p>"Write2Win helped my debut novel reach #1 in its category with their strategic ad campaigns."</p>
+        <p><strong>- Jane D., Romance Author</strong></p>
+      </div>
+      <div class="testimonial-card">
+        <p>"Their market research revealed audience insights that doubled my pre-orders."</p>
+        <p><strong>- Michael T., Thriller Writer</strong></p>
+      </div>
+    </section>
 
-  </main>  <footer>
-    <p>&copy; 2025 Write2Win Promotion. All Rights Reserved.</p>
-    <div>
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Ready to Boost Your Sales?</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Tell us about your book project"></textarea>
+        <button type="submit" class="cta-button">Get Started</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Write2Win Promotion. All rights reserved.</p>
+    <div class="social-links">
       <a href="#"><i class="fab fa-facebook"></i></a>
       <a href="#"><i class="fab fa-twitter"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
-  </footer>  <script>
+  </footer>
+
+  <script>
+    // Simple form validation
     document.querySelector('.contact-form').addEventListener('submit', function(e) {
       e.preventDefault();
-      alert('Thank you! We’ll get in touch within 24 hours.');
+      alert('Thank you! We will contact you within 24 hours.');
       this.reset();
     });
-  </script></body>
+  </script>
+</body>
+</html>
                                                       </html>
