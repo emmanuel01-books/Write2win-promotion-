@@ -180,26 +180,121 @@
 
     .tagline {
       color: #7f8c8d;
-      font-size: 1.1rem;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Write2Win Promotion | Bestseller Book Marketing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    /* === BASE STYLES === */
+    :root {
+      --primary: #e74c3c;
+      --primary-dark: #c0392b;
+      --dark: #2c3e50;
+      --light: #f9f9f9;
+      --gray: #7f8c8d;
+    }
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background: var(--light);
+    }
+
+    /* === ANIMATIONS === */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-service {
+      animation: fadeInUp 0.8s ease-out forwards;
+      opacity: 0;
+    }
+    
+    .service-card:nth-child(1) { animation-delay: 0.2s; }
+    .service-card:nth-child(2) { animation-delay: 0.4s; }
+    .service-card:nth-child(3) { animation-delay: 0.6s; }
+    
+    /* === HEADER === */
+    header {
+      background: #ffffff;
+      text-align: center;
+      padding: 3rem 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    }
+
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      height: 90px;
+      width: auto;
+      margin-bottom: 1rem;
+      transition: transform 0.3s;
+    }
+    
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    .header-text h1 {
+      margin: 0;
+      color: var(--dark);
+      font-size: 2.5rem;
+      background: linear-gradient(to right, var(--dark), var(--primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tagline {
+      color: var(--gray);
+      font-size: 1.2rem;
       margin-top: 0.5rem;
+      font-weight: 500;
     }
 
     .banner {
       width: 100%;
-      max-width: 800px;
+      max-width: 1000px;
       height: auto;
       margin-top: 2rem;
       border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .banner:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
     }
 
     /* === NAVIGATION === */
     nav {
-      background: #2c3e50;
+      background: var(--dark);
       padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .nav-container {
@@ -216,27 +311,31 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      transition: background 0.3s;
+      padding: 0.7rem 1.5rem;
+      border-radius: 50px;
+      transition: all 0.3s;
     }
 
     .nav-link:hover {
-      background: rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.15);
+      transform: translateY(-2px);
     }
 
     .cta-button {
-      background: #e74c3c;
+      background: var(--primary);
       color: white;
-      padding: 0.5rem 1.5rem;
-      border-radius: 4px;
+      padding: 0.7rem 2rem;
+      border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
     }
 
     .cta-button:hover {
-      background: #c0392b;
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
     }
 
     /* === MAIN CONTENT === */
@@ -245,72 +344,382 @@
       margin: 0 auto;
       padding: 2rem 1rem;
     }
+    
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: var(--dark);
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    
+    h2:after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
 
     /* === SERVICES === */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2.5rem;
+      margin: 4rem 0;
     }
 
     .service-card {
       background: white;
-      border-radius: 8px;
-      padding: 2rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: all 0.4s;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.05);
     }
-
+    
     .service-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+    
+    .service-card:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: var(--primary);
     }
 
     .service-icon {
-      font-size: 2.5rem;
-      color: #e74c3c;
-      margin-bottom: 1rem;
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s;
+    }
+    
+    .service-card:hover .service-icon {
+      transform: scale(1.1);
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin: 0 0 1.5rem 0;
+      color: var(--dark);
+      position: relative;
+    }
+    
+    .service-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    
+    .service-card:hover .service-image {
+      transform: scale(1.02);
+    }
+    
+    .service-features {
+      margin: 1.5rem 0;
+      padding-left: 1.2rem;
+    }
+    
+    .service-features li {
+      margin-bottom: 0.8rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    
+    .service-features li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: bold;
+    }
+    
+    .service-cta {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background: var(--primary);
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    
+    .service-cta:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
     }
 
     /* === TESTIMONIALS === */
     .testimonials {
-      margin: 4rem 0;
+      margin: 6rem 0;
+    }
+    
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2.5rem;
     }
 
     .testimonial-card {
       background: white;
-      border-radius: 8px;
-      padding: 2rem;
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      position: relative;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    .testimonial-card:before {
+      content: """;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      font-size: 5rem;
+      color: rgba(231, 76, 60, 0.1);
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+    
+    .testimonial-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .testimonial-text {
+      font-style: italic;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      margin-top: 2rem;
+    }
+    
+    .author-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 1.5rem;
+      border: 3px solid var(--primary);
+    }
+    
+    .author-info h4 {
+      margin: 0;
+      color: var(--dark);
+    }
+    
+    .author-info p {
+      margin: 0.3rem 0 0;
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+    
+    .testimonial-rating {
+      color: #f39c12;
       margin: 1rem 0;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      font-size: 1.2rem;
+    }
+    
+    .testimonial-stats {
+      background: rgba(231, 76, 60, 0.1);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+    }
+    
+    .testimonial-stats strong {
+      color: var(--primary);
+    }
+
+    /* === CONTACT FORM === */
+    .contact-section {
+      background: white;
+      border-radius: 12px;
+      padding: 3rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      margin: 4rem 0;
+    }
+    
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: var(--dark);
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+    }
+    
+    textarea.form-control {
+      min-height: 150px;
+    }
+    
+    .submit-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 2rem auto 0;
+      box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    }
+    
+    .submit-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
     }
 
     /* === FOOTER === */
     footer {
-      background: #2c3e50;
+      background: var(--dark);
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
+      padding: 4rem 1rem;
+      margin-top: 4rem;
+    }
+    
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .footer-logo {
+      height: 70px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+    
+    .social-links {
+      margin: 2rem 0;
+    }
+    
+    .social-links a {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border-radius: 50%;
+      margin: 0 0.5rem;
+      font-size: 1.2rem;
+      transition: all 0.3s;
+    }
+    
+    .social-links a:hover {
+      background: var(--primary);
+      transform: translateY(-5px);
+    }
+    
+    .copyright {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      margin-top: 2rem;
     }
 
     /* === RESPONSIVE ADJUSTMENTS === */
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
       .header-content {
-        flex-direction: row;
-        text-align: left;
-        gap: 2rem;
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .header-text h1 {
+        font-size: 2rem;
       }
       
       .nav-container {
-        gap: 1.5rem;
+        gap: 0.8rem;
+      }
+      
+      .nav-link, .cta-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+      }
+      
+      .services-grid, .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-section {
+        padding: 2rem 1.5rem;
       }
     }
   </style>
 </head>
 <body>
   <!-- Header Section -->
-  <header>
+  <header class="animate__animated animate__fadeIn">
     <div class="header-content">
       <img src="images/logo.png" alt="Write2Win Logo" class="logo">
       <div class="header-text">
@@ -335,71 +744,211 @@
   <main>
     <!-- Services Section -->
     <section id="services">
-      <h2>Our Proven Services</h2>
+      <h2 class="animate__animated animate__fadeIn">Our Premium Services</h2>
       <div class="services-grid">
-        <div class="service-card">
+        <div class="service-card animate-service">
           <i class="fas fa-chart-line service-icon"></i>
-          <h3>Market Research</h3>
-          <p>We analyze your genre to identify the most profitable reader demographics and marketing opportunities.</p>
+          <h3>Comprehensive Market Research</h3>
+          <p>We conduct in-depth analysis of your book's genre to uncover hidden opportunities and create a data-backed marketing strategy.</p>
+          
+          <img src="images/market-research.jpg" alt="Market Research Analysis" class="service-image">
+          
+          <ul class="service-features">
+            <li><strong>300+ data points</strong> analyzed including Amazon rankings, reviews, and pricing trends</li>
+            <li><strong>Competitor breakdown</strong> identifying weaknesses in their marketing approach</li>
+            <li><strong>Reader persona development</strong> to precisely target your ideal audience</li>
+            <li><strong>Seasonal trend analysis</strong> to time your launch for maximum impact</li>
+          </ul>
+          
+          <p>Our research has helped authors <strong>increase conversions by 47%</strong> on average by targeting the right readers with the right message.</p>
+          
+          <a href="#contact" class="service-cta">Get Your Analysis</a>
         </div>
         
-        <div class="service-card">
+        <div class="service-card animate-service">
           <i class="fas fa-ad service-icon"></i>
-          <h3>Targeted Ads</h3>
-          <p>ROI-focused advertising campaigns on Amazon, Facebook, and BookTok.</p>
+          <h3>Targeted Advertising Campaigns</h3>
+          <p>Professionally managed ad campaigns that deliver real results, not just vanity metrics.</p>
+          
+          <img src="images/ad-campaigns.jpg" alt="Advertising Campaigns" class="service-image">
+          
+          <ul class="service-features">
+            <li><strong>Amazon Ads</strong> optimized for your book's keywords and categories</li>
+            <li><strong>Facebook/Instagram</strong> campaigns targeting lookalike audiences</li>
+            <li><strong>BookTok strategies</strong> that drive viral engagement</li>
+            <li><strong>Daily optimization</strong> based on performance data</li>
+          </ul>
+          
+          <p>Our clients average <strong>3.8x return on ad spend</strong> through continuous testing and refinement of their campaigns.</p>
+          
+          <a href="#contact" class="service-cta">Launch Your Campaign</a>
         </div>
         
-        <div class="service-card">
+        <div class="service-card animate-service">
           <i class="fas fa-book-open service-icon"></i>
-          <h3>Launch Strategy</h3>
-          <p>Complete roadmap to maximize your book's first 30-day sales potential.</p>
+          <h3>Strategic Book Launches</h3>
+          <p>End-to-end launch plans that create buzz and drive sustained sales.</p>
+          
+          <img src="images/book-launch.jpg" alt="Book Launch Strategy" class="service-image">
+          
+          <ul class="service-features">
+            <li><strong>Pre-launch buzz</strong> through ARC distribution and influencer outreach</li>
+            <li><strong>Day-by-day promotion plan</strong> for the critical first 30 days</li>
+            <li><strong>Review acquisition strategy</strong> to build social proof quickly</li>
+            <li><strong>Price sequencing</strong> to maximize visibility and royalties</li>
+          </ul>
+          
+          <p>Our launch strategies have helped <strong>87 authors</strong> reach bestseller status in their categories.</p>
+          
+          <a href="#contact" class="service-cta">Plan Your Launch</a>
         </div>
       </div>
     </section>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
-      <h2>Author Success Stories</h2>
-      <div class="testimonial-card">
-        <p>"Write2Win helped my debut novel reach #1 in its category with their strategic ad campaigns."</p>
-        <p><strong>- Jane D., Romance Author</strong></p>
-      </div>
-      <div class="testimonial-card">
-        <p>"Their market research revealed audience insights that doubled my pre-orders."</p>
-        <p><strong>- Michael T., Thriller Writer</strong></p>
+      <h2 class="animate__animated animate__fadeIn">What Our Authors Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card animate__animated animate__fadeInLeft">
+          <div class="testimonial-content">
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-text">
+              "After struggling for years to get traction with my mystery series, Write2Win's market research revealed exactly where I was missing my target audience. Their ad campaigns generated <strong>$24,500 in sales</strong> in the first two months, and I finally hit #1 in my category. Their team doesn't just throw ads at the wall - they use real data to make every dollar count."
+            </p>
+            
+            <div class="testimonial-stats">
+              <strong>Results:</strong> 4.7x ROAS | #1 in Private Investigator Mysteries | 287 new reviews in 30 days
+            </div>
+            
+            <div class="testimonial-author">
+              <img src="images/author-jane.jpg" alt="Jane D." class="author-avatar">
+              <div class="author-info">
+                <h4>Jane D.</h4>
+                <p>Author of "The Silent Witness" Mystery Series</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card animate__animated animate__fadeInRight">
+          <div class="testimonial-content">
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-text">
+              "As a debut author, I was overwhelmed by marketing options. Write2Win's launch strategy gave me a clear roadmap that resulted in <strong>1,200 pre-orders</strong> and an Amazon Bestseller tag within 48 hours of launch. What impressed me most was their transparency - I could see exactly how each tactic contributed to my success."
+            </p>
+            
+            <div class="testimonial-stats">
+              <strong>Results:</strong> 1,200+ pre-orders | Amazon Bestseller | 4.8 avg. rating from 356 reviews
+            </div>
+            
+            <div class="testimonial-author">
+              <img src="images/author-michael.jpg" alt="Michael T." class="author-avatar">
+              <div class="author-info">
+                <h4>Michael T.</h4>
+                <p>Debut Author of "The Last Heist"</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-      <h2>Ready to Boost Your Sales?</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Tell us about your book project"></textarea>
-        <button type="submit" class="cta-button">Get Started</button>
+    <section id="contact" class="contact-section animate__animated animate__fadeIn">
+      <h2>Ready to Transform Your Book's Success?</h2>
+      <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem; font-size: 1.1rem;">
+        Schedule a free 30-minute strategy session with our marketing team. We'll analyze your current approach and identify the highest-impact opportunities to grow your readership and sales.
+      </p>
+      
+      <form class="contact-form" id="bookMarketingForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" class="form-control" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" class="form-control" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="book">Book Title & Genre</label>
+          <input type="text" id="book" class="form-control" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="goals">Your Biggest Marketing Challenge</label>
+          <select id="goals" class="form-control" required>
+            <option value="">Select one...</option>
+            <option value="launch">Planning a new book launch</option>
+            <option value="ads">Running effective ads</option>
+            <option value="visibility">Increasing book visibility</option>
+            <option value="reviews">Getting more reviews</option>
+            <option value="other">Other challenge</option>
+          </select>
+        </div>
+        
+        <button type="submit" class="submit-btn">Get My Free Strategy Session</button>
       </form>
     </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Write2Win Promotion. All rights reserved.</p>
-    <div class="social-links">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
+    <div class="footer-content">
+      <img src="images/logo-white.png" alt="Write2Win Logo" class="footer-logo">
+      
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#testimonials">Success Stories</a>
+        <a href="#contact">Contact</a>
+        <a href="#">Blog</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-goodreads"></i></a>
+      </div>
+      
+      <p class="copyright">&copy; 2024 Write2Win Promotion. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    // Simple form validation
-    document.querySelector('.contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Thank you! We will contact you within 24 hours.');
-      this.reset();
+    // Animate service cards on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const serviceCards = document.querySelectorAll('.animate-service');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = 'running';
+            entry.target.style.opacity = '1';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      serviceCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.animationPlayState = 'paused';
+        observer.observe(card);
+      });
+      
+      // Form submission
+      document.getElementById('bookMarketingForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        const name = formData.get('name');
+        
+        // In a real implementation, you would send this data to your server
+        alert(`Thank you, ${name}! We'll contact you within 24 hours to schedule your free strategy session.`);
+        this.reset();
+      });
     });
   </script>
 </body>
 </html>
-                                                      </html>
